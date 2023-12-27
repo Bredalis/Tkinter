@@ -1,20 +1,18 @@
 
-"""
-Programa que 
-muestra una 
-interfaz con 
-un saludo
-"""
+# Programa que muestra una 
+# interfaz con un saludo
 
 import tkinter as tk
 
 interfaz = tk.Tk()
-tk.Wm.wm_title(interfaz, "Saludo")
-interfaz.resizable(0,0)
+tk.Wm.wm_title(interfaz, 'Saludo')
+interfaz.resizable(0, 0)
 
-# Icono
+icono = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Python_1.ico'
+interfaz.iconbitmap(icono)
 
-interfaz.iconbitmap("C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Python_1.ico")
+tk.Label(
+	interfaz, text = 'Hola Mundo De La Programacion', fg = '#884EA0',
+	font = (25), bg = 'pink', padx = 10, pady = 10).pack()
 
-tk.Label(interfaz, text = "Hola Mundo De La Programacion", fg = "#884EA0", font = (25), bg = 'pink', padx = 10, pady = 10).pack()
 interfaz.mainloop()
