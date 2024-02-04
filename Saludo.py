@@ -8,7 +8,7 @@ interfaz = tk.Tk()
 tk.Wm.wm_title(interfaz, 'Saludo')
 interfaz.resizable(0, 0)
 
-icono = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Python_1.ico'
+icono = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Python_1.ico'
 interfaz.iconbitmap(icono)
 
 tk.Label(

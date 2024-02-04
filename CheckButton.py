@@ -10,7 +10,7 @@ interfaz.config(bg = 'pink')
 interfaz.geometry('270x120')
 interfaz.resizable(0, 0)
 
-icono = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Viaje.ico'
+icono = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Viaje.ico'
 interfaz.iconbitmap(icono)
 
 playa = tk.IntVar()

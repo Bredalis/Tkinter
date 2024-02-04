@@ -10,7 +10,7 @@ interfaz.resizable(0, 0)
 interfaz.title('Elecciones')
 interfaz.geometry('225x125')
 
-icono = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Genero.ico'
+icono = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Genero.ico'
 interfaz.iconbitmap(icono)
 
 # Funcion que muestra 
