@@ -10,7 +10,7 @@ interfaz.config(bg = 'pink')
 interfaz.geometry('270x120')
 interfaz.resizable(0, 0)
 
-icono = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Viaje.ico'
+icono = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/Imagenes/Avion.ico'
 interfaz.iconbitmap(icono)
 
 playa = tk.IntVar()
@@ -25,13 +25,13 @@ def Elige_Viaje():
 	opcion = ''
 
 	if(playa.get() == 1):		
-		opcion += 'Playa  '
+		opcion += 'Playa'
 
 	if (monte.get() == 1):
-		opcion += 'Montaña  '
+		opcion += ' Montaña'
 
 	if (turismo_rural.get() == 1):
-		opcion += 'Turismo Rural'
+		opcion += ' Turismo Rural'
 
 	lugares.config(text = opcion)
 
@@ -55,7 +55,7 @@ tk.Checkbutton(
 
 # Etiqueta que contiene el lugar elegido
 
-lugares = tk.Label(interfaz, bg = rosado)
+lugares = tk.Label(interfaz, bg = rosado, pady = 10)
 lugares.pack(side = 'bottom')
 
 interfaz.mainloop()
