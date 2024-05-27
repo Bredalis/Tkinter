@@ -1,6 +1,5 @@
 
-# Interfaz para elegir 
-# un lugar para viajar
+# Elegir un lugar para viajar
 
 import tkinter as tk
 
@@ -9,16 +8,13 @@ tk.Wm.wm_title(interfaz, "Lugares Para Viajar")
 interfaz.config(bg = "pink")
 interfaz.geometry("270x120")
 interfaz.resizable(0, 0)
-
-icono = "Avion.ico"
-interfaz.iconbitmap(icono)
+interfaz.iconbitmap("Avion.ico")
 
 playa = tk.IntVar()
 monte = tk.IntVar()
 turismo_rural = tk.IntVar()
 
-# Funcion que muestra 
-# los lugares para elegir
+# Funcion para elegir los lugares
 
 def Elige_Viaje():
 
@@ -38,7 +34,6 @@ def Elige_Viaje():
 # Multimedia de la interfaz
 
 rosado = "pink"
-
 tk.Label(interfaz, text = "Elige Destino", width = 20, bg = rosado).pack()
 
 def botones(texto, variable):

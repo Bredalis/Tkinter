@@ -1,6 +1,5 @@
 
-# Interfaz para 
-# elegir un genero
+# Elegir un genero
 
 import tkinter as tk
 
@@ -9,12 +8,9 @@ interfaz.config(bg = "pink")
 interfaz.resizable(0, 0)
 interfaz.title("Eleccion De Genero")
 interfaz.geometry("270x125")
+interfaz.iconbitmap("Genero.ico")
 
-icono = "Genero.ico"
-interfaz.iconbitmap(icono)
-
-# Funcion que muestra el 
-# resultado de haber elegido un genero
+# Muestra el resultado de la eleccion un genero
 
 opcion = tk.IntVar()
 
