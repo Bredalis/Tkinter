@@ -13,35 +13,29 @@ interfaz.iconbitmap("Genero.ico")
 # Muestra el resultado de la eleccion un genero
 
 opcion = tk.IntVar()
+generos = ["Masculino", "Femenino", "Otros"]
 
 def eleccion_genero():
 
-	complemento = "Has Elegido"
-	
-	if opcion.get() == 1:			
-		genero.config(text = f"{complemento} Masculino")
+	for i in range(1, 4):
 
-	elif opcion.get() == 2:
-	    genero.config(text = f"{complemento} Femenina")
-
-	else:		
-		genero.config(text = f"{complemento} Otros")
+		if opcion.get() == i:			
+			genero.config(text = f"Has Elegido {generos[i - 1]}")
 
 # Multimedia de la interfaz
 
 rosado = "pink"
-azul_cielo = "skyblue"
 
 tk.Label(interfaz, text = "Genero :", bg = rosado, pady = 5).pack()
 
 def radio_boton(texto, valor):
 
 	tk.Radiobutton(
-		interfaz, text = texto, bg = rosado, activebackground = azul_cielo, 
+		interfaz, text = texto, bg = rosado, activebackground = "skyblue", 
 		variable = opcion, value = valor, command = eleccion_genero).pack()
 
-radio_boton("Masculino", 1)
-radio_boton("Femenino", 2)
+radio_boton(generos[0], 1)
+radio_boton(generos[1], 2)
 radio_boton("Otras opciones", 3)
 
 # Etiqueta que contiene el resultado
