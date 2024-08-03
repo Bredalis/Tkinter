@@ -8,7 +8,7 @@ tk.Wm.wm_title(interfaz, "Lugares Para Viajar")
 interfaz.config(bg = "pink")
 interfaz.geometry("270x120")
 interfaz.resizable(0, 0)
-interfaz.iconbitmap("Avion.ico")
+interfaz.iconbitmap("../IMG/Avion.ico")
 
 playa = tk.IntVar()
 monte = tk.IntVar()

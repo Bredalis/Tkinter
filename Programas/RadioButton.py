@@ -8,7 +8,7 @@ interfaz.config(bg = "pink")
 interfaz.resizable(0, 0)
 interfaz.title("Eleccion De Genero")
 interfaz.geometry("270x125")
-interfaz.iconbitmap("Genero.ico")
+interfaz.iconbitmap("../IMG/Genero.ico")
 
 # Muestra el resultado de la eleccion un genero
 
