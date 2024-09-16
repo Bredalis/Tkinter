@@ -6,7 +6,7 @@ import tkinter as tk
 interfaz = tk.Tk()
 tk.Wm.wm_title(interfaz, "Lugares Para Viajar")
 interfaz.config(bg = "pink")
-interfaz.geometry("270x120")
+interfaz.geometry("270x150")
 interfaz.resizable(0, 0)
 interfaz.iconbitmap("../IMG/Avion.ico")
 
@@ -34,7 +34,7 @@ def Elige_Viaje():
 # Multimedia de la interfaz
 
 rosado = "pink"
-tk.Label(interfaz, text = "Elige Destino", width = 20, bg = rosado).pack()
+tk.Label(interfaz, text = "Elige Destino", width = 20, bg = rosado).pack(pady = 10)
 
 def botones(texto, variable):
 

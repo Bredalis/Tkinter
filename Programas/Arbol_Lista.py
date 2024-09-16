@@ -12,10 +12,10 @@ ventana.resizable(0, 0)
 
 # Entry para ingresar el elemento
 
-entrada = tk.Entry(ventana, width = 30)
+entrada = ttk.Entry(ventana, width = 30)
 entrada.pack(pady = 10)
 
-boton_agregar = tk.Button(ventana, text = "Agregar elemento", 
+boton_agregar = ttk.Button(ventana, text = "Agregar elemento", 
     command = agregar_elemento)
 boton_agregar.pack(pady = 5)
 
