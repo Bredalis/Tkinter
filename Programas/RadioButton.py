@@ -1,46 +1,42 @@
 
-# Elegir un genero
+"""
+Programa para elegir un género
+"""
 
 import tkinter as tk
 
-interfaz = tk.Tk()
-interfaz.config(bg = "pink")
-interfaz.resizable(0, 0)
-interfaz.title("Eleccion De Genero")
-interfaz.geometry("270x125")
-interfaz.iconbitmap("../IMG/Genero.ico")
+# Configuración de la ventana principal
+ventana = tk.Tk()
+ventana.config(bg = "pink")
+ventana.resizable(False, False)
+ventana.title("Elección de género")
+ventana.geometry("270x125")
+ventana.iconbitmap("../IMG/Genero.ico")
 
-# Muestra el resultado de la eleccion un genero
-
+# Variables y opciones de género
 opcion = tk.IntVar()
 generos = ["Masculino", "Femenino", "Otros"]
 
+# Función para mostrar el género seleccionado
 def eleccion_genero():
+	seleccion = generos[opcion.get() - 1]
+	genero.config(text = f"Has elegido {seleccion.lower()}")
 
-	for i in range(1, 4):
+# Etiqueta para el título
+tk.Label(ventana, text = "Genero:", bg = "pink", pady = 5).pack()
 
-		if opcion.get() == i:			
-			genero.config(text = f"Has Elegido {generos[i - 1]}")
-
-# Multimedia de la interfaz
-
-rosado = "pink"
-
-tk.Label(interfaz, text = "Genero :", bg = rosado, pady = 5).pack()
-
-def radio_boton(texto, valor):
-
+# Función para crear los botones de opciones de género
+def crear_boton(texto, valor):
 	tk.Radiobutton(
-		interfaz, text = texto, bg = rosado, activebackground = "skyblue", 
+		ventana, text = texto, bg = "pink", activebackground = "skyblue", 
 		variable = opcion, value = valor, command = eleccion_genero).pack()
 
-radio_boton(generos[0], 1)
-radio_boton(generos[1], 2)
-radio_boton("Otras opciones", 3)
+# Crear botones de selección de género
+for i, texto in enumerate(generos, start = 1):
+	crear_boton(texto, i)
 
-# Etiqueta que contiene el resultado
-
-genero = tk.Label(interfaz, bg = rosado)
+# Etiqueta para mostrar el género seleccionado
+genero = tk.Label(ventana, bg = "pink")
 genero.pack()
 
-interfaz.mainloop()
+ventana.mainloop()

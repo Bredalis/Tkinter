@@ -1,29 +1,30 @@
 
 import tkinter as tk
 
-# Obtener y mostrar en la etiqueta 
-# el elemento seleccionado 
-
+# Función para mostrar el elemento 
+# seleccionado en la etiqueta
 def mostrar_seleccion():
     seleccion = cuadro_lista.get(tk.ACTIVE)
-    etiqueta.config(text = "Seleccionaste: " + seleccion)
+    etiqueta.config(text = f"Seleccionaste: {seleccion}")
 
+# Configuración de la ventana principal
 ventana = tk.Tk()
-ventana.title("Cuadro De Lista")
+ventana.title("Cuadro de lista")
 ventana.geometry("300x220")
 
-# Crear un cuadro de lista y una etiqueta
-
+# Crear cuadro de lista
 cuadro_lista = tk.Listbox(ventana)
 
 for i in range(1, 4):
     cuadro_lista.insert(i, f"Opción {i}")
 cuadro_lista.pack()
 
-button = tk.Button(ventana, text = "Mostrar selección", 
+# Botón para mostrar la selección
+boton_mostrar = tk.Button(ventana, text = "Mostrar selección", 
     command = mostrar_seleccion)
-button.pack()
+boton_mostrar.pack()
 
+# Etiqueta para mostrar la selección
 etiqueta = tk.Label(ventana)
 etiqueta.pack()
 
