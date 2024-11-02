@@ -1,54 +1,53 @@
 
-# Elegir un lugar para viajar
+"""
+Programa para elegir un lugar para viajar
+"""
 
 import tkinter as tk
 
-interfaz = tk.Tk()
-tk.Wm.wm_title(interfaz, "Lugares Para Viajar")
-interfaz.config(bg = "pink")
-interfaz.geometry("270x150")
-interfaz.resizable(0, 0)
-interfaz.iconbitmap("../IMG/Avion.ico")
+# Configuración de la ventana principal
+ventana = tk.Tk()
+tk.Wm.wm_title(ventana, "Lugares para viajar")
+ventana.config(bg = "pink")
+ventana.geometry("270x150")
+ventana.resizable(False, False)
+ventana.iconbitmap("../IMG/Avion.ico")
 
+# Variables para las opciones de viaje
 playa = tk.IntVar()
 monte = tk.IntVar()
 turismo_rural = tk.IntVar()
 
-# Funcion para elegir los lugares
-
-def Elige_Viaje():
-
-	opcion = ""
+# Función para elegir los lugares
+def elige_viaje():
+	opcion = []
 
 	if(playa.get() == 1):		
-		opcion += "Playa"
+		opcion.append("Playa")
 
 	if (monte.get() == 1):
-		opcion += " Montaña"
+		opcion.append("Montaña")
 
 	if (turismo_rural.get() == 1):
-		opcion += " Turismo Rural"
+		opcion.append("Turismo Rural")
 
-	lugares.config(text = opcion)
+	lugares.config(text = " ".join(opcion))
 
-# Multimedia de la interfaz
+# Etiqueta para el título
+tk.Label(ventana, text = "Elige tu destino:", width = 20, bg = "pink").pack(pady = 10)
 
-rosado = "pink"
-tk.Label(interfaz, text = "Elige Destino", width = 20, bg = rosado).pack(pady = 10)
-
-def botones(texto, variable):
-
+def crear_boton(texto, variable):
 	tk.Checkbutton(
-		interfaz, text = texto, variable = variable, onvalue = 1, 
-		offvalue = 0, bg = rosado, command = Elige_Viaje).pack()
+		ventana, text = texto, variable = variable, onvalue = 1, 
+		offvalue = 0, bg = "pink", command = elige_viaje).pack()
 
-botones("Playa", playa)
-botones("Motaña", monte)
-botones("Turismo Rural", turismo_rural)
+# Crear botones para las opciones
+crear_boton("Playa", playa)
+crear_boton("Motaña", monte)
+crear_boton("Turismo Rural", turismo_rural)
 
-# Etiqueta que contiene el lugar elegido
-
-lugares = tk.Label(interfaz, bg = rosado, pady = 10)
+# Etiqueta que muestra el lugar elegido
+lugares = tk.Label(ventana, bg = "pink", pady = 10)
 lugares.pack(side = "bottom")
 
-interfaz.mainloop()
+ventana.mainloop()
